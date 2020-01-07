@@ -12,7 +12,7 @@ To do so, we do the following :
 Once the clusters are done, we give each clusters `n` keywords (`n`we is a parameter you can find in main.py). How do we choose these latters? We do the following :
 
 for each cluster :
-* then for each clusters we choose `n` word for which the **( P(word  AND cluster) - P(word).P(cluster) )^2** is maximal
+* we choose `n` words for which the **( P(word  AND cluster) - P(word).P(cluster) )^2** is maximal
 * So at that point we have words that are correlated to the clusters but we don't know whether they are so because they are over-represented or under-respresented. 
 * That's why we need an another metric. We then compute the following : **P( word / cluster ) / ( sumOverClusters{ P( word / cluster_i ) })** . If that quantity is 1, that means that our cluster is the only one that have this word  in its corpus. If it's zero, that means the cluster doesn't have at all that word. 
 
